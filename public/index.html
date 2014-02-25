@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 page_header">
+                <h1>Chat App with Node.js + Socket.io</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <h3>Messages</h3>
+                <div class="overflowable">
+                    <div class="content" id="messages"></div>
+                    <div class="toolbar">
+                        <form onsubmit="return compose_message();">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Message" id="compose_text">
+                            <span class="input-group-btn">
+                                <button  class="btn btn-primary" type="submit">Send</button>
+                            </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3>
+                    Users Online
+                </h3>
+                <div class="overflowable">
+                    <div class="content">
+                        <ul id="userlist"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+    <script src="/client.js"></script>
+</body>
+</html>
